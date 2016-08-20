@@ -2,8 +2,8 @@
 A [wix-style-processor](https://github.com/wix/wix-style-processor) plugin that transforms CSS direction expressions, based on a given RTL/LTR parameter.
 
 # Installation
-```
-npm i -S wsp-plugin-rtl
+```shell
+$ npm i -S wsp-plugin-rtl
 ```
 
 # Usage
@@ -11,7 +11,7 @@ npm i -S wsp-plugin-rtl
 ```css
 .my-selector {
     padding-START: 9px;   /* START will be replaced with left / right, given rtl = false / true */
-    float: START;         /* Same as above, applied to the value
+    float: START;         /* Same as above, applied to the value */
     padding-END: 9px;     /* END will be replaced with left / right, given rtl = true / false */
     direction: "DIR";     /* DIR will be replaced with ltr / rtl, given rtl = false / true */
     margin: STARTSIGN5px; /* STARTSIGN will be replaced with -, given rtl = false, and will be removed for rtl = true */
