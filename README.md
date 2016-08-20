@@ -8,7 +8,7 @@ npm i -S wsp-plugin-rtl
 
 # Usage
 ##### CSS
-```
+```css
 .my-selector {
     padding-START: 9px;   /* START will be replaced with left / right, given rtl = false / true */
     float: START;         /* Same as above, applied to the value
