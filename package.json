@@ -3,18 +3,22 @@
   "version": "1.0.0",
   "description": "RTL/LTR transformations for the wix-style-processor module",
   "main": "index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "mocha --require babel-register \"test/**/*.test.js\"",
     "test:watch": "mocha --watch --require babel-register \"test/**/*.test.js\"",
     "compile": "rm -rf dist/ && babel -d dist/ src/",
     "build": "npm run compile",
     "bundle": "webpack",
-    "release": "npm install @wix/wnpm-ci && wnpm-release"
+    "release": "wnpm-release"
   },
   "dependencies": {
     "lodash": "^4.15.0",
     "mocha": "^3.0.2"
   },
+  "private": false,
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
