@@ -7,6 +7,13 @@ $ npm i -S wsp-plugin-rtl
 ```
 
 # Usage
+
+Expression | RTL | LTR
+---- | ---------- | -----------
+START | right | left
+END | left | right
+
+
 ##### CSS
 ```css
 .my-selector {
