@@ -119,6 +119,19 @@ describe('RTL/LTR transformations', () => {
             assert.equal(result.value, '-5px');
         });
 
+        it('STARTSIGN should not be replaced in invalid syntax', () => {
+            //Given
+            key = 'padding';
+            value = 'url(bas64fdsdfSTARTSIGNfdsx';
+
+            //When
+            let result = run();
+
+            //Then
+            assert.equal(result.key, 'padding');
+            assert.equal(result.value, value);
+        });
+
         it('ENDSIGN', () => {
             //Given
             key = 'padding';
