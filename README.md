@@ -34,7 +34,7 @@ import styleProcessor from 'wix-style-processor';
 import RtlPlugin from 'wsp-plugin-rtl';
 
 const isRtl = true; //or false for LTR
-const rtlPlugin = RtlPlugin(rtl);
+const rtlPlugin = RtlPlugin(isRtl);
 
 $(document).ready(() => {
     styleProcessor.plugins.addDeclarationReplacer(rtlPlugin);
