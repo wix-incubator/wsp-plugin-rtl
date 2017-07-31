@@ -37,9 +37,8 @@ const isRtl = true; //or false for LTR
 const rtlPlugin = RtlPlugin(rtl);
 
 $(document).ready(() => {
-    styleProcessor
-        .declarationPlugin(rtlPlugin)
-        .init().then(() => {
+    styleProcessor.plugins.addDeclarationReplacer(rtlPlugin);
+    styleProcessor.init().then(() => {
             //start rendering your application here - otherwise your app will flicker
         });
 });
