@@ -1,6 +1,6 @@
 {
   "name": "wsp-plugin-rtl",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "RTL/LTR transformations for the wix-style-processor module",
   "main": "dist/index.js",
   "files": [

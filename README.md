@@ -12,6 +12,10 @@ Expression | RTL | LTR
 ---- | ---------- | -----------
 START | right | left
 END | left | right
+STARTSIGN | '' | '-'
+ENDSIGN | '-' | ''
+DEG-START | 180 | 0
+DEG-END | 0 | 180
 DIR | rtl | ltr
 
 
@@ -24,6 +28,8 @@ DIR | rtl | ltr
     direction: DIR;     /* DIR will be replaced with ltr / rtl, given rtl = false / true */
     margin: STARTSIGN5px; /* STARTSIGN will be replaced with -, given rtl = false, and will be removed for rtl = true */
     margin: ENDSIGN5px;   /* ENDSIGN will be replaced with -, given rtl = true, and will be removed for rtl = false */
+    transform: rotate(DEG-STARTdeg);
+    transform: rotate(DEG-ENDdeg);
 }
 ```
 

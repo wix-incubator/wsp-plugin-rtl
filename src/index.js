@@ -6,12 +6,11 @@ export default rtl => {
   }
 
   function replaceRtlStrings(str) {
-    let replaced = str.replace(/STARTSIGN/g, getSTARTSIGN())
+    return str.replace(/STARTSIGN/g, getSTARTSIGN())
       .replace(/ENDSIGN/g, getENDSIGN())
       .replace(/START/g, getSTART())
       .replace(/END/g, getEND())
       .replace(/DIR/g, getDIR());
-    return replaced;
   }
 
   function replaceValue(str) {
@@ -28,6 +27,12 @@ export default rtl => {
     }
     if (str.match(/ENDSIGN\d/)) {
       str = str.replace('ENDSIGN', getENDSIGN());
+    }
+    if (str.match(/DEG-START/)) {
+      str = str.replace('DEG-START', getDEGSTART());
+    }
+    if (str.match(/DEG-END/)) {
+      str = str.replace('DEG-END', getDEGEND());
     }
     return str;
   }
@@ -50,6 +55,14 @@ export default rtl => {
 
   function getENDSIGN() {
     return rtl ? '-' : '';
+  }
+
+  function getDEGSTART() {
+    return rtl ? '180' : '0';
+  }
+
+  function getDEGEND() {
+    return rtl ? '0' : '180';
   }
 
   return rtlLtrTransformer;
