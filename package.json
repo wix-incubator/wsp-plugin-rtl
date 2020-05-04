@@ -12,11 +12,14 @@
     "compile": "rm -rf dist/ && babel -d dist/ src/",
     "build": "npm run compile",
     "bundle": "webpack",
-    "release": "wnpm-release"
+    "release": "wnpm-release",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "lodash": "^4.15.0",
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "snyk": "^1.317.0"
   },
   "private": false,
   "publishConfig": {
@@ -40,5 +43,6 @@
     "wsp"
   ],
   "author": "InterAl",
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
